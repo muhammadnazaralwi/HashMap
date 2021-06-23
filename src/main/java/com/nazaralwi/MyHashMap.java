@@ -115,4 +115,21 @@ public class MyHashMap<K, V> {
         }
         return ret;
     }
+
+
+    public void remove(K key){
+        if (containsKey(key)) {
+            if (key == null) {
+                try {
+                    HASH_TABLE[0] = null;
+                } catch (NullPointerException exception) {
+                }
+            } else {
+                int location = hashing(key.hashCode());
+                try {
+                    HASH_TABLE[location] = null;
+                } catch (NullPointerException exception) { }
+            }
+        }
+    }
 }
