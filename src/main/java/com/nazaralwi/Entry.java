@@ -20,7 +20,6 @@ public class Entry<K, V> {
         this.val = val;
     }
 
-    // Menentukan lokasi penyimpanan dari pasangan key dan value
     public int hashCode() {
         int prime = 13;
         int mul = 11;
