@@ -25,9 +25,7 @@ public class MyHashMap<K, V> {
         Entry e = null;
         try {
             e = HASH_TABLE[location];
-        } catch (NullPointerException exception) {
-
-        }
+        } catch (NullPointerException exception) { }
 
         if (e != null && e.getKey() == key) {
             return true;
@@ -100,9 +98,7 @@ public class MyHashMap<K, V> {
         Entry<K, V> e = null;
         try {
             e = HASH_TABLE[0];
-        } catch (NullPointerException exception) {
-            System.out.println("");
-        }
+        } catch (NullPointerException exception) { }
         V ret = null;
         if (e != null && e.getKey() == null) {
             ret = (V) e.getVal();
@@ -122,8 +118,7 @@ public class MyHashMap<K, V> {
             if (key == null) {
                 try {
                     HASH_TABLE[0] = null;
-                } catch (NullPointerException exception) {
-                }
+                } catch (NullPointerException exception) { }
             } else {
                 int location = hashing(key.hashCode());
                 try {
